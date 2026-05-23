@@ -1,0 +1,234 @@
+  
+@media screen and (max-width : 991px){
+   
+   .footer-links{
+    justify-content: space-around;
+   }
+
+   .netflix{
+      margin-top: 15px;
+      font-size: 5vw;
+   }
+
+
+}
+@media  screen and (max-width:630px) {
+   .email input{
+      padding: 10px 120px 10px 10px;
+      width: 70%;
+      height: auto;
+      margin-right: 0px;
+   }
+   .btn{
+      padding: 20px 26px 20px 26px;
+   }
+   .email{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      justify-content: space-evenly;
+   }
+   #sec5{
+      display: none;
+   }
+   .tranding{
+      gap: 15px;
+   }
+}
+@media  screen and (max-width: 767px) {
+ .section{
+    justify-content: center;
+    height: 350px;
+ }
+ .main{
+    padding: 0 20px;
+ }
+ .logo img{
+    height: 85px;
+ }
+ .trandingsection{
+    height: 40px;
+ }
+ .footer{
+    padding: 0 20px;
+ }
+ .tranding{
+    height: 170px;
+ }
+ #sec1{
+    height: 100%;
+ }
+ #sec2{
+    height: 100%;
+ }
+ #sec3{
+    height: 100%;
+ }
+ #sec4{
+    height: 100%;
+ }
+ #sec5{
+    height: 100%;
+ }
+ #sec6{
+    display: none;
+ }
+ #sec7{
+    display: none;
+ }
+ #join{
+    margin-top: 15px;
+ }
+ .reason{
+    display: flex;
+    flex-direction: column;
+ }
+ .asked{
+    margin-top: 15px;
+ }
+ .btn1{
+    height: 60px;
+ }
+ .btn3{
+    margin-top: 20px;
+ }
+ .footer1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+ }
+ .india{
+    margin-top: 80px;
+ }
+ .footer-links{
+    margin-top: 25px;
+    margin-bottom: 35px;
+    
+ }
+ .footer-links li{
+    margin-bottom: 20px;
+ }
+}
+@media screen and (max-width:479px) {
+   .navbar{
+      padding: 0;
+   }
+  .logo h1{
+   font-size: 2em;
+  }
+   #movie{
+      font-size: 2.4em;
+   }
+    .main{
+        padding: 0 15px;
+    }
+    .footer{
+        padding: 0 15px;
+    }
+ .navbar{
+    height: auto;
+ }
+ #sign{
+    height: 50px;
+ }
+ .right-section{
+    width: 170px;
+ }
+ .language-select{
+   width: 80px;
+   height: 35px;
+   padding: 4px;
+ }
+ #sign{
+    padding: 5px ;
+    height: 35px;
+    width: 80px;
+ }
+ h2{
+   font-size: 1em;
+ }
+ .para1{
+   text-align: center;
+   font-size: 1em;
+ }
+ .email{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+ }
+ .email input{
+    width: 90%;
+    margin-right: 0px;
+   padding: 15px 200px 15px 10px;
+ }
+ .btn{
+    padding: 10px 15px;
+ }
+ .trandingsection{
+    height: 30px;
+ }
+ #trade{
+    font-size: 1.2em;
+ }
+ #sec5{
+    display: none;
+ }
+ #sec4{
+    display: none;
+ }
+ #join{
+    font-size: 1.2em;
+ }
+ .heading{
+    font-size: 1.4em
+    ;
+ }
+ .asked{
+    font-size: 1.2em;
+ }
+ #btn1{
+    height: 40px;
+    font-size: 15px;
+ }
+ #btn3{
+    padding: 10px 10px;
+    margin-top: 40px;
+ }
+ .sp{
+    font-size: 15px;
+ }
+  .footer-links{
+    margin-top: 25px;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    
+ }
+ .footer-links li{
+    margin-bottom: 10px;
+ }
+ .btn{
+   margin-top: 25px;
+   margin-bottom: 35px;
+ }
+ .netflix{
+   font-size: 7vw;
+ }
+
+}
+
+.footer-links a {
+  color: #b3b3b3;
+  text-decoration: underline;
+  font-size: 16px;
+}
+.footer-links a:hover {
+  text-decoration: none;
+}
+.india {
+  margin-top: 100px;
+  color: rgb(172, 169, 169);
+}
