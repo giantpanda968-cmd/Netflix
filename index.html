@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+
+    <title>Netflix</title>
+    <!--<link rel="stylesheet" href="style.css" />-->
+    <!--<link rel="stylesheet" href="media-query.css">-->
+   <style>
+     * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   /* outline: 1px solid rebeccapurple; */
+}
+body {
+  background-color: black;
+  color: white;
+}
+.main {
+  /* border: 2px solid white; */
+  background-color: black;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 50%,
+      rgba(0, 0, 0, 0.8) 50%
+    ),
+    url("https://i.pinimg.com/1200x/19/8b/2f/198b2f01e73b905772279616eccc7c65.jpg");
+  width: 100%;
+  height: auto;
+}
+.navbar {
+    /* border: 2px solid white; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between dropdown and button */
+}
+
+.language-select {
+  padding: 10px 40px;
+  border-radius: 4px;
+  background: black;
+  color: white;
+  /* border: 1px solid white; */
+  font-size: 16px;
+  cursor: pointer;
+}
+.language-select:hover {
+  opacity: 85%;
+}
+#sign {
+  background-color: red;
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+#sign:hover {
+  opacity: 85%;
+}
+.logo {
+  /* border: 2px solid rgb(220, 11, 11); */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: auto;
+  height: 60px;
+}
+.netflix{
+  font-size: 4vw;
+  color: red;
+  text-align: center;
+  margin-top: 8px;
+}
+.section {
+   /* border: 2px solid rgb(93, 211, 9); */
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5em;
+}
+#movie {
+   /* border: 2px solid rgb(8, 12, 96); */
+  color: white;
+  text-align: center;
+  font-size: 5vw;
+}
+h2 {
+   /* border: 2px solid rgb(224, 8, 213); */
+  color: white;
+  font-size: 2.3vw;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+.para1 {
+   /* border: 2px solid rgb(251, 8, 12); */
+  color: white;
+  font-size: 2vw;
+  letter-spacing: 1px;
+  padding: 15px;
+}
+.email input {
+  padding: 15px 180px 10px 10px;
+  border-radius: 5px;
+  /* border: 1px solid white; */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.btn {
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 85%;
+}
+.trandingsection {
+  width: 100%;
+  height: 50px;
+  /* border: 4px solid rgb(255, 0, 0); */
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+  background: linear-gradient(
+    to right,
+    rgb(182, 39, 101),
+    red,
+    rgb(182, 39, 101)
+  );
+  -webkit-mask-image: linear-gradient(
+    black,
+    transparent
+  ); /* keeps only top part visible */
+  mask-image: linear-gradient(rgb(239, 8, 212), transparent);
+  margin-top: 10px;
+}
+.footer {
+  padding: 0px 40px;
+   /* border: 2px solid rgb(0, 217, 33); */
+}
+#trade {
+   /* border: 2px solid rgb(9, 39, 238); */
+  color: white;
+  font-size: 2.5vw;
+  letter-spacing: 1px;
+}
+.tranding {
+   /* border: 2px solid rgb(254, 3, 129); */
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 1em;
+}
+.span {
+  object-fit: cover;
+   /* border: 2px solid rgb(255, 218, 10); */
+  height: 18vw;
+  width: 140vw;
+  border-radius: 10px;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.span:hover {
+  transform: scale(1.1);
+}
+#sec1 {
+  background-image: url(https://i.pinimg.com/originals/02/36/42/02364245a9e13df536e1e48393f48c6d.jpg);
+}
+#sec2 {
+  background-image: url(https://i.pinimg.com/736x/0a/fa/84/0afa84b6393d82d8c7ee6f9f1a08173f.jpg);
+}
+#sec3 {
+  background-image: url(https://i.pinimg.com/736x/fb/62/e3/fb62e34ed5d5492289b8167f938cf981.jpg);
+}
+#sec4 {
+  background-image: url(https://i.pinimg.com/1200x/2d/1c/2b/2d1c2be1aac908b871282afc35c971b3.jpg);
+}
+#sec5 {background-image: url(https://i.pinimg.com/736x/de/08/6b/de086be9a2f36028c9ec2be80508bd3c.jpg);
+}
+#sec6 {
+  background-image: url(https://i.pinimg.com/736x/f3/e3/3d/f3e33d9361bb4986b75645df7c29cd26.jpg);
+}
+#sec7 {
+  background-image: url(https://i.pinimg.com/1200x/d1/0e/a7/d10ea7a49ea2bc59842ca422f4caf749.jpg);
+}
+#join {
+  color: white;
+  margin-top: 30px;
+  font-size: 24px;
+}
+.reason {
+  height: auto;
+  width: 100%;
+  margin-top: 15px;
+  color: white;
+  display: grid;
+  flex-direction: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5vw;
+}
+.box {
+  height: 150px;
+  width: 100%;
+  background-image: linear-gradient(160deg, rgb(21, 21, 81), black);
+  padding-left: 15px;
+  padding-top: 20px;
+  border-radius: 15px;
+  gap: 10px;
+  cursor: pointer;
+}
+.box:hover {
+  opacity: 85%;
+}
+.heading {
+  color: white;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.para2 {
+  padding: 20px 0px 0px 0px;
+  font-size: 16px;
+  color: rgb(196, 196, 196);
+  letter-spacing: 1px;
+}
+.asked {
+  margin-top: 30px;
+  font-size: 24px;
+}
+.btn1 {
+  margin-top: 15px;
+  width: 100%;
+  text-align: start;
+  height: 4em;
+  padding-left: 20px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background-color: rgba(182, 179, 179, 0.323);
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+.btn1:hover {
+  opacity: 85%;
+}
+#btn3 {
+  background-color: red;
+  font-size: 20px;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  margin-top: 70px;
+  border: none;
+  padding-left: 20px;
+  padding-right: 40px;
+  cursor: pointer;
+}
+#btn3:hover {
+  opacity: 85%;
+}
+.footer1 {
+  height: auto;
+  margin-top: 70px;
+  width: 100%;
+}
+.sp {
+  font-size: 1.5rem;
+  padding: 3px;
+}
+.sp a {
+  color: rgb(116, 116, 250);
+}
+.sp a:hover {
+  text-decoration: none;
+}
+.footer-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  /* border: 2px solid lime; */
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  /* border: 2px solid orange; */
+}
+
+.footer-links li {
+  margin-bottom: 30px;
+}
+@media screen and (max-width : 991px){
+   
+   .footer-links{
+    justify-content: space-around;
+   }
+
+   .netflix{
+      margin-top: 15px;
+      font-size: 5vw;
+   }
+
+
+}
+@media  screen and (max-width:630px) {
+   .email input{
+      padding: 10px 120px 10px 10px;
+      width: 70%;
+      height: auto;
+      margin-right: 0px;
+   }
+   .btn{
+      padding: 20px 26px 20px 26px;
+   }
+   .email{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      justify-content: space-evenly;
+   }
+   #sec5{
+      display: none;
+   }
+   .tranding{
+      gap: 15px;
+   }
+}
+@media  screen and (max-width: 767px) {
+ .section{
+    justify-content: center;
+    height: 350px;
+ }
+ .main{
+    padding: 0 20px;
+ }
+ .logo img{
+    height: 85px;
+ }
+ .trandingsection{
+    height: 40px;
+ }
+ .footer{
+    padding: 0 20px;
+ }
+ .tranding{
+    height: 170px;
+ }
+ #sec1{
+    height: 100%;
+ }
+ #sec2{
+    height: 100%;
+ }
+ #sec3{
+    height: 100%;
+ }
+ #sec4{
+    height: 100%;
+ }
+ #sec5{
+    height: 100%;
+ }
+ #sec6{
+    display: none;
+ }
+ #sec7{
+    display: none;
+ }
+ #join{
+    margin-top: 15px;
+ }
+ .reason{
+    display: flex;
+    flex-direction: column;
+ }
+ .asked{
+    margin-top: 15px;
+ }
+ .btn1{
+    height: 60px;
+ }
+ .btn3{
+    margin-top: 20px;
+ }
+ .footer1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+ }
+ .india{
+    margin-top: 80px;
+ }
+ .footer-links{
+    margin-top: 25px;
+    margin-bottom: 35px;
+    
+ }
+ .footer-links li{
+    margin-bottom: 20px;
+ }
+}
+@media screen and (max-width:479px) {
+   .navbar{
+      padding: 0;
+   }
+  .logo h1{
+   font-size: 2em;
+  }
+   #movie{
+      font-size: 2.4em;
+   }
+    .main{
+        padding: 0 15px;
+    }
+    .footer{
+        padding: 0 15px;
+    }
+ .navbar{
+    height: auto;
+ }
+ #sign{
+    height: 50px;
+ }
+ .right-section{
+    width: 170px;
+ }
+ .language-select{
+   width: 80px;
+   height: 35px;
+   padding: 4px;
+ }
+ #sign{
+    padding: 5px ;
+    height: 35px;
+    width: 80px;
+ }
+ h2{
+   font-size: 1em;
+ }
+ .para1{
+   text-align: center;
+   font-size: 1em;
+ }
+ .email{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+ }
+ .email input{
+    width: 90%;
+    margin-right: 0px;
+   padding: 15px 200px 15px 10px;
+ }
+ .btn{
+    padding: 10px 15px;
+ }
+ .trandingsection{
+    height: 30px;
+ }
+ #trade{
+    font-size: 1.2em;
+ }
+ #sec5{
+    display: none;
+ }
+ #sec4{
+    display: none;
+ }
+ #join{
+    font-size: 1.2em;
+ }
+ .heading{
+    font-size: 1.4em
+    ;
+ }
+ .asked{
+    font-size: 1.2em;
+ }
+ #btn1{
+    height: 40px;
+    font-size: 15px;
+ }
+ #btn3{
+    padding: 10px 10px;
+    margin-top: 40px;
+ }
+ .sp{
+    font-size: 15px;
+ }
+  .footer-links{
+    margin-top: 25px;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    
+ }
+ .footer-links li{
+    margin-bottom: 10px;
+ }
+ .btn{
+   margin-top: 25px;
+   margin-bottom: 35px;
+ }
+ .netflix{
+   font-size: 7vw;
+ }
+
+}
+
+.footer-links a {
+  color: #b3b3b3;
+  text-decoration: underline;
+  font-size: 16px;
+}
+.footer-links a:hover {
+  text-decoration: none;
+}
+.india {
+  margin-top: 100px;
+  color: rgb(172, 169, 169);
+}
+
+   </style>
+    <!-- adding favicon icon of netflix -->
+     <link rel="icon" type="image/x-icon" href="favicon.ico">
+  </head>
+  <body>
+<div class="main">
+ <div class="navbar">
+  <div class="logo">
+    <!-- <img src="netflixlogo.jpg" alt="Netflix Logo" /> -->
+     <h1 class="netflix">NETFLIX</h1>
+  </div>
+  <div class="right-section">
+    <select class="language-select">
+      <option>English</option>
+      <option>हिन्दीं</option>
+      <option>Urdu</option>
+      <option>Spanish</option>
+    </select>
+    <button id="sign">Sign in</button>
+  </div>
+</div>
+
+        <div class="section">
+          <h1 id="movie">
+            Unlimited movies,<br/>TV
+            Show and more
+          </h1>
+          <h2>Starts at ₹149. Cancel at any time.</h2>
+          <p class="para1">Ready to watch? Enter your email to create or restart your membership.</p>
+          <div class="email">
+         <input type="email" placeholder="Enter Email"><button class="btn">Finish Sign-Up</button>
+         </div>
+        </div>
+      </div>
+
+      </div>
+    <!-- </div>end -->
+
+      <div class="trandingsection"></div>
+
+      <div class="footer">
+        <h1 id="trade">Trending Now</h1>
+        <div class="tranding">
+        <span class="span" id="sec1">1</span>
+        <span class="span" id="sec2">2</span>
+        <span class="span" id="sec3">3</span>
+        <span class="span" id="sec4">4</span>
+        <span class="span" id="sec5">5</span>
+         <span class="span" id="sec6">6</span>
+          <span class="span" id="sec7">7</span>
+        </div>
+        <h1 id="join">More reason to Join</h1>
+        <div class="reason">
+          <div class="box">
+             <h3 class="heading">Enjoy on your TV</h3>
+            <p  class="para2">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+          </div>
+          <div class="box">
+            <h3 class="heading">Download your shows to watch offline</h3>
+            <p class="para2">Save your favourites easily and always have something to watch.</p>
+          </div>
+          <div class="box">
+             <h3 class="heading">Watch everywhere</h3>
+            <p class="para2">Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+          </div>
+          <div class="box">
+              <h3 class="heading">Create profiles for kids</h3>
+            <p class="para2">Send kids on adventures with their favourite characters in a space made just for them — free with your membership.</p>
+          </div>
+        </div>
+
+        <h1 class="asked">Frequently Asked Questions</h1>
+
+        <button class="btn1">What is Netflix?</button>
+        <button class="btn1">How much does Netflix cost?</button>
+        <button class="btn1">Where can i watch?</button>
+        <button class="btn1">How do i cancel?</button>
+        <button class="btn1">What can i wathc on Netflix?</button>
+        <button class="btn1">Is Netflix good for cids?</button>
+
+
+        <button id="btn3">Finish Sign-Up</button>
+
+         <footer class="footer1">
+          <span class="sp">call for any query: <a href="#">+91 9876543210</a></span>
+  <div class="footer-links">
+    <ul>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Media Centre</a></li>
+      <li><a href="#">Ways to Watch</a></li>
+      <li><a href="#">Cookie Preferences</a></li>
+      <li><a href="#">Speed Test</a></li>
+    </ul>
+
+    <ul>
+      <li><a href="#">Help Centre</a></li>
+      <li><a href="#">Investor Relations</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Corporate Information</a></li>
+      <li><a href="#">Legal Notices</a></li>
+    </ul>
+
+    <ul>
+      <li><a href="#">Account</a></li>
+      <li><a href="#">Jobs</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Only on Netflix</a></li>
+    </ul>
+  </div>
+       
+   <select class="language-select">
+      <option>English</option>
+       <option>हिन्दीं</option>
+      <option>Urdo</option>
+      <option>Spanish</option>
+    </select>
+
+
+     <h2 class="india">Netflix India</h2>
+        </footer>
+ </div>
+ <script src="script.js"></script>
+  </body>
+</html>
